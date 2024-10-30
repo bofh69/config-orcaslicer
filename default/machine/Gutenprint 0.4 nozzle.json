@@ -1,0 +1,28 @@
+{
+    "from": "User",
+    "inherits": "Voron 2.4 300 0.4 nozzle",
+    "is_custom_defined": "0",
+    "machine_max_acceleration_extruding": [
+        "10000",
+        "20000"
+    ],
+    "machine_max_acceleration_retracting": [
+        "1500",
+        "5000"
+    ],
+    "machine_max_acceleration_x": [
+        "5000",
+        "20000"
+    ],
+    "machine_max_acceleration_y": [
+        "5000",
+        "20000"
+    ],
+    "machine_start_gcode": "PRINT_START EXTRUDER=[nozzle_temperature_initial_layer] BED=[bed_temperature_initial_layer_single] CHAMBER=[chamber_temperature]\n\nM117 Priming\nG1 X0.1 Y0.1 Z0.3\nG92 E0\nG1 X170.1 E20 F300             ; Draw first line, 5mm/s extrusion.\nG92 E0\nM73 P0 R146\nG1 X200 F3000\n; G1 Z15                   ; move nozzle away from bed\nM117 Printing",
+    "name": "Gutenprint 0.4 nozzle",
+    "nozzle_type": "brass",
+    "preferred_orientation": "45",
+    "print_host": "mainsailos.local",
+    "printer_settings_id": "Gutenprint 0.4 nozzle",
+    "version": "2.1.1.0"
+}
